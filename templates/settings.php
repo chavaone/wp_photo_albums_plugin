@@ -1,10 +1,10 @@
 <div class="wrap">
-    <h2>WP Plugin Template</h2>
-    <form method="post" action="options.php"> 
-        <?php @settings_fields('wp_plugin_template-group'); ?>
-        <?php @do_settings_fields('wp_plugin_template-group'); ?>
+    <h2>Photos Album</h2>
+    <form method="post" action="options.php">
+        <?php @settings_fields('wp_album_plugin-group'); ?>
+        <?php @do_settings_fields('wp_album_plugin-group'); ?>
 
-        <?php do_settings_sections('wp_plugin_template'); ?>
+        <?php do_settings_sections('wp_album_plugin'); ?>
 
         <?php @submit_button(); ?>
     </form>

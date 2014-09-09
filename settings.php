@@ -19,45 +19,44 @@ if(!class_exists('WP_Photo_Album_Plugin_Settings'))
         public function admin_init()
         {
         	// register your plugin's settings
-        	register_setting('wp_plugin_template-group', 'setting_a');
-        	register_setting('wp_plugin_template-group', 'setting_b');
+        	register_setting('wp_album_plugin-group', 'flickr_api_key');
+        	register_setting('wp_album_plugin-group', 'fb_key');
 
         	// add your settings section
         	add_settings_section(
-        	    'wp_plugin_template-section',
-        	    'WP Plugin Template Settings',
-        	    array(&$this, 'settings_section_wp_plugin_template'),
-        	    'wp_plugin_template'
+        	    'wp_album_plugin-section',
+        	    'Chaves das APIS',
+        	    array(&$this, 'settings_section_wp_album_plugin'),
+        	    'wp_album_plugin'
         	);
 
         	// add your setting's fields
             add_settings_field(
-                'wp_plugin_template-setting_a',
-                'Setting A',
+                'wp_album_plugin-flickr_api_key',
+                'Flickr API Key',
                 array(&$this, 'settings_field_input_text'),
-                'wp_plugin_template',
-                'wp_plugin_template-section',
+                'wp_album_plugin',
+                'wp_album_plugin-section',
                 array(
-                    'field' => 'setting_a'
+                    'field' => 'flickr_api_key'
                 )
             );
             add_settings_field(
-                'wp_plugin_template-setting_b',
-                'Setting B',
+                'wp_album_plugin-fb_key',
+                'Facebook API Key',
                 array(&$this, 'settings_field_input_text'),
-                'wp_plugin_template',
-                'wp_plugin_template-section',
+                'wp_album_plugin',
+                'wp_album_plugin-section',
                 array(
-                    'field' => 'setting_b'
+                    'field' => 'fb_key'
                 )
             );
             // Possibly do additional admin_init tasks
         } // END public static function activate
 
-        public function settings_section_wp_plugin_template()
+        public function settings_section_wp_album_plugin()
         {
-            // Think of this as help text for the section.
-            echo 'These settings do things for the WP Plugin Template.';
+            echo 'Estas chaves son útiles para empregar as fotos de Flickr, Facebook ou outras redes sociais...';
         }
 
         /**
@@ -83,7 +82,7 @@ if(!class_exists('WP_Photo_Album_Plugin_Settings'))
         	    'Photo Albums Settings',
         	    'WP Plugin Template',
         	    'manage_options',
-        	    'wp_plugin_template',
+        	    'wp_album_plugin',
         	    array(&$this, 'plugin_settings_page')
         	);
         } // END public function add_menu()
