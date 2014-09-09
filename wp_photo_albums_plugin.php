@@ -41,7 +41,7 @@ if(!class_exists('WP_Photo_Album_Plugin'))
 
 			// Register custom post types
 			require_once(sprintf("%s/post-types/post_type_template.php", dirname(__FILE__)));
-			$Post_Type_Template = new Post_Type_Template();
+			$Album_Post_Type = new Album_Post_Type();
 
 			$plugin = plugin_basename(__FILE__);
 			add_filter("plugin_action_links_$plugin", array( $this, 'plugin_settings_link' ));

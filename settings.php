@@ -43,7 +43,7 @@ if(!class_exists('WP_Photo_Album_Plugin_Settings'))
             );
             add_settings_field(
                 'wp_album_plugin-fb_key',
-                'Facebook API Key',
+                'Facebook APP ID',
                 array(&$this, 'settings_field_input_text'),
                 'wp_album_plugin',
                 'wp_album_plugin-section',
