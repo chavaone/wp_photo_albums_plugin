@@ -19,9 +19,10 @@ if(!class_exists('Album_Post_Type'))
     	{
     		// Initialize Post Type
     		$this->create_post_type();
-    		add_action('save_post', array(&$this, 'save_post'));
+    		add_action ('save_post', array(&$this, 'save_post'));
             add_filter ("manage_edit-albums_columns", array(&$this, "edit_columns"));
             add_action ("manage_posts_custom_column", array(&$this, "custom_columns"));
+            add_action ( 'admin_head', array(&$this, 'add_menu_icons_styles' ));
     	}
 
 
@@ -52,7 +53,7 @@ if(!class_exists('Album_Post_Type'))
                 'show_ui' => true,
                 '_builtin' => false,
                 'capability_type' => 'post',
-                'menu_icon' => get_bloginfo('template_url') . '/img/album-icon.png',
+                'menu_icon' => "",
                 'menu_position' => 5,
                 'hierarchical' => false,
                 'rewrite' => array( "slug" => "albums" ),
@@ -133,6 +134,17 @@ if(!class_exists('Album_Post_Type'))
             echo '<img src="' . $thumb_url[0] . '" height="175px"/>';
             break;
           }
+        }
+
+        public function add_menu_icons_styles()
+        {?>
+            <style>
+                #adminmenu .menu-icon-albums div.wp-menu-image:before
+                {
+                  content: "\f232";
+                }
+            </style>
+            <?php
         }
 
 
