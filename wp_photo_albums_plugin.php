@@ -25,9 +25,9 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-if(!class_exists('WP_Plugin_Template'))
+if(!class_exists('WP_Photo_Album_Plugin'))
 {
-	class WP_Plugin_Template
+	class WP_Photo_Album_Plugin
 	{
 		/**
 		 * Construct the plugin object
@@ -36,7 +36,7 @@ if(!class_exists('WP_Plugin_Template'))
 		{
 			// Initialize Settings
 			require_once(sprintf("%s/settings.php", dirname(__FILE__)));
-			$WP_Plugin_Template_Settings = new WP_Plugin_Template_Settings();
+			$WP_Photo_Album_Plugin_Settings = new WP_Photo_Album_Plugin_Settings();
 
 			// Register custom post types
 			require_once(sprintf("%s/post-types/post_type_template.php", dirname(__FILE__)));
@@ -71,16 +71,16 @@ if(!class_exists('WP_Plugin_Template'))
 		}
 
 
-	} // END class WP_Plugin_Template
-} // END if(!class_exists('WP_Plugin_Template'))
+	} // END class WP_Photo_Album_Plugin
+} // END if(!class_exists('WP_Photo_Album_Plugin'))
 
-if(class_exists('WP_Plugin_Template'))
+if(class_exists('WP_Photo_Album_Plugin'))
 {
 	// Installation and uninstallation hooks
-	register_activation_hook(__FILE__, array('WP_Plugin_Template', 'activate'));
-	register_deactivation_hook(__FILE__, array('WP_Plugin_Template', 'deactivate'));
+	register_activation_hook(__FILE__, array('WP_Photo_Album_Plugin', 'activate'));
+	register_deactivation_hook(__FILE__, array('WP_Photo_Album_Plugin', 'deactivate'));
 
 	// instantiate the plugin class
-	$wp_plugin_template = new WP_Plugin_Template();
+	$wp_plugin_template = new WP_Photo_Album_Plugin();
 
 }
