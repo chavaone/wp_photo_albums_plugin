@@ -80,7 +80,7 @@ if(!class_exists('WP_Photo_Album_Plugin_Settings'))
             // Add a page to manage this plugin's settings
         	add_options_page(
         	    'Photo Albums Settings',
-        	    'WP Plugin Template',
+        	    'WP Photo Albums Plugin',
         	    'manage_options',
         	    'wp_album_plugin',
         	    array(&$this, 'plugin_settings_page')
