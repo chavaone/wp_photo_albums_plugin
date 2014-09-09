@@ -1,15 +1,16 @@
 <?php
 /*
-Plugin Name: WP Plugin Template
-Plugin URI: https://github.com/fyaconiello/wp_plugin_template
-Description: A simple wordpress plugin template
+Plugin Name: WP Photo Album Plugin
+Plugin URI: https://github.com/chavaone/wp_photo_albums_plugin
+Description: A photo album wordpress plugin.
 Version: 1.0
-Author: Francis Yaconiello
-Author URI: http://www.yaconiello.com
+Author: Marcos Chavarría Teijeiro
+Author URI: http://aquelando.info
 License: GPL2
 */
 /*
-Copyright 2012  Francis Yaconiello  (email : francis@yaconiello.com)
+Copyright 2012  Francis Yaconiello  <francis@yaconiello.com>
+          2014  Marcos Chavarría Teijeiro <chavarria1991@gmail.com>
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as
