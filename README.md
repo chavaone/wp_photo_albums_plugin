@@ -1,4 +1,8 @@
-wp_plugin_template
+WP Photo Albums Plugin
 ==================
 
-A plugin template
+Allows to import photos from:
+ * Facebook Albums.
+ * Flickr Sets
+ * Wordpress
+ * URL
