@@ -6,6 +6,7 @@ Description: A photo album wordpress plugin.
 Version: 1.0
 Author: Marcos Chavarría Teijeiro
 Author URI: http://aquelando.info
+GitHub Plugin URI: chavaone/wp_photo_albums_plugin
 License: GPL2
 */
 /*
